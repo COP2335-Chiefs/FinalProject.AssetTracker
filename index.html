@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Entec Asset Tracker : Application to track the loaning of tablet PC&#39;s">
+    <title>Entec Asset Tracker by COP2335-Chiefs</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Entec Asset Tracker</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Entec Asset Tracker</h1>
+        <p>Application to track the loaning of tablet PC&#39;s</p>
+        <p class="view"><a href="https://github.com/COP2335-Chiefs/FinalProject.AssetTracker">View the Project on GitHub <small>COP2335-Chiefs/FinalProject.AssetTracker</small></a></p>
+        <ul>
+          <li><a href="https://github.com/COP2335-Chiefs/FinalProject.AssetTracker/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/COP2335-Chiefs/FinalProject.AssetTracker/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/COP2335-Chiefs/FinalProject.AssetTracker">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/COP2335-Chiefs/FinalProject.AssetTracker">View on GitHub</a>
 
-          <h1 id="project_title">Entec Asset Tracker</h1>
-          <h2 id="project_tagline">Application to track the loaning of tablet PC&#39;s</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/COP2335-Chiefs/FinalProject.AssetTracker/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/COP2335-Chiefs/FinalProject.AssetTracker/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<p><ins></ins></p>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
+
+
+<h2>
 <a id="requirements-document--scope-of-work" class="anchor" href="#requirements-document--scope-of-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements Document &amp; Scope of Work</h2>
 
 <h3>
@@ -56,24 +60,142 @@ Business Context
 <h2>
 <a id="revision-history" class="anchor" href="#revision-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Revision History</h2>
 
-<h3>
-<a id="name----date--------------description---------team-member---version" class="anchor" href="#name----date--------------description---------team-member---version" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>Name    Date              Description         Team Member   Version</em>
-</h3>
+<p><code>Name   Date              Description         Team Member   Version</code>
+<code>Draft  03/14/2015  Document Creation   Saturno      0.1</code>
+<code>Update 3/22/2015   Document Update          Lopez       0.9</code></p>
 
-<p>Draft   03/14/2015  Document Creation   Saturno      0.1
-Update  3/22/2015   Document Update          Lopez       0.9</p>
+<h2>
+<a id="1---business-requirements--scope-of-work" class="anchor" href="#1---business-requirements--scope-of-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.   Business Requirements &amp; Scope of Work</h2>
+
+<p>The Miami Dade College Engineering &amp; Technology (EnTec) Department requires the means to keep track of its Tablet PC hardware assets that are to be loaned to its students and members of the community. The solution must provide the lender a way to easily and efficiently collect all of the information needed to ensure that all equipment can be tracked in a way that benefits both parties involved, so that the department can keep a record of all Tablet PC’s loaned in real-time. </p>
+
+<p>The department would also like to ensure that any lost or damaged Tablet PC’s will be reported to the person responsible efficiently so that an accurate inventory of what is available to use is available to those who need the information. Ideally the system will also help to free up the time of the individuals responsible for tracking these assets by automating the scheduling and reservation process so that the system tracks when, where, and who has reserved each asset. The goal would be to reduce the amount of resources are overcommitted and mishandled by the current, manual scheduling process.   </p>
+
+<p><strong>1.1.  Background</strong>
+The existing hardware asset tracking methodology consists of spreadsheets that must be filled out manually. The person responsible begins by recording barcode information and the hardware’s serial numbers at the moment of lending. This spreadsheet is then updated by matching the barcode information and serial number of the returned tablet against the initially entered checkout information which includes the duration of the equipment loan and who is responsible for the Tablet PC after it has been checked out.. </p>
+
+<p><strong>1.2.  Business Opportunity</strong>
+The opportunity that the solution we provide gives rise to, is the ability for the Entec department to work more efficiently and sustainably by being able to track their assets and any damages to their assets more productively. The department’s ability to track their assets will be able to help produce better reports for budget requests in future years by accurately tracking the demand for the use of Tablet PC’s based on the amount of Tablets loaned out and by tracking the damages made to these assets in order to request replacement and/or repair funds. </p>
+
+<p><strong>1.3.  Business Objectives and Success Criteria</strong></p>
+
+<ul>
+<li><p>Ensure a more efficient and accurate lending process by keeping track of the current Inventory against what is out on loan</p></li>
+<li><p>Provide a more accurate tracking system that records the condition of the assets in Inventory</p></li>
+<li><p>Create a solution that tracks who has borrowed the equipment in inventory in real-time</p></li>
+<li><p>Enable the lender to keep track of hardware scheduling &amp; reservations</p></li>
+<li><p>The system must report the current status of the inventory and the current status of inventory on loan</p></li>
+<li><p>The system must keep track of inventory and what assets are damaged and need replacement or repair</p></li>
+<li><p>The system must keep track of who has loaned out any assets and how long they have agreed to keep them out on loan</p></li>
+<li><p>The system should have a GUI to enable a more productive User Experience</p></li>
+<li><p>The system should be able to use a barcode scanner to scan in the bar codes for each Tablet into a field form that will enable ease of use.</p></li>
+</ul>
+
+<p><strong>1.4.  Customer Needs</strong>
+1.  Program must track number of tablets in inventory against number of tablets "on Loan".</p>
+
+<ol>
+<li><p>The system must track who the tablets have been loaned to and data must be collected in regards to who has made the agreement to actually take the tablet.</p></li>
+</ol>
+
+<ul>
+<li><p>There needs to be a mechanism for tracking how much time the tablet will be out on loan. This information is derived from the form that we use to get the amount of time on loan as requested by the person making the request to borrow the tablet. We need a follow up question in regards to max time the tablet should be on loan. Project Owner stated they are not concerned with the length of time so long as the person returns it as per the agreement made when the record was created but maybe we should cap it to no more than three weeks or someone in the future will likely create a record that agrees to loan the tablet for 2 years. </p></li>
+</ul>
+
+<ol>
+<li><p>The program must allow users to schedule and reserve the tablets for the dates they specify so as to avoid any scheduling conflicts with other people who may want to take out the tablets on loan also.</p></li>
+<li><p>There must be a form that collects data in the form of an incident report in case the tablets are lost, damaged, stolen, or destroyed by an act of god. Someone, for the love of god, must be informed!!!!</p></li>
+<li><p>Need a way to report data to the user/person responsible for tracking tablets. a few reporting fields requested are as follows:</p></li>
+</ol>
+
+<ul>
+<li><p>What is on loan at any moment</p></li>
+<li><p>what is the current inventory count</p></li>
+<li><p>How many tablets are damaged</p></li>
+<li><p>how many are late:</p></li>
+<li>  Who is late in returning</li>
+<li> how many days late?</li>
+<li> student information</li>
+</ul>
+
+<p><strong>1.5.  Business Risks</strong>
+The existing deadline entails a timing challenge for the team and creates the possibility of the team being unable to achieve the most optimal solution.
+ </p>
+
+<h2>
+<a id="2----vision-of-the-solution" class="anchor" href="#2----vision-of-the-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.    Vision of the Solution</h2>
+
+<p><strong>1.1.  Vision Statement</strong>
+The ultimate goal of the Entec Asset Tracker is to optimize every step in the asset-tracking process by providing a higher degree of automation and a logical organization of the data pertaining to this process, thereby facilitating it as much as possible.</p>
+
+<p><strong>1.2.  Major Features</strong>
+<em>Must-Have:</em></p>
+
+<ul>
+<li><p>Entec Asset Tracker  includes a data entry program that provides a simpler, faster, and more organized way to keep a real-time record of loaned hardware and equipment schedules and reservations</p></li>
+<li><p>Data entry forms that gather Student data to keep a record of who is borrowing any equipment from the department</p></li>
+<li><p>The System must keep a track of all physical inventory on hand and loaned out</p></li>
+<li><p>Convenient incident report forms facilitate a quicker and more intelligible way to measure asset depreciation</p></li>
+<li><p>The system must be able to report on who has any equipment on loan in excess of the time agreed upon</p></li>
+</ul>
+
+<p><em>Should-Have:</em></p>
+
+<ul>
+<li><p>Entec Asset Tracker should be designed to work with a bar code scanner in order to provide an even faster way to keep track of assets</p></li>
+<li><p>The system should have a working database to keep a record of all equipment in inventory and who is borrowing the equipment in inventory</p></li>
+</ul>
+
+<p><em>Could-Have:</em></p>
+
+<ul>
+<li>  Entec Asset Tracker could achieve a more engaging and intuitive user experience by providing an easy-to-use graphical user interface (GUI) </li>
+</ul>
+
+<p>*<em>1.3.  Assumptions and *</em>
+The Entec Asset Tracker team is working under the assumption that there is readily available documentation from scanner manufactures about their products and that these documents will provide appropriate information that will enable the team to successfully implement the use of a scanner as an additional part of the solution by using the manufacturers API.</p>
+
+<h2>
+<a id="3----scope-and-limitations" class="anchor" href="#3----scope-and-limitations" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.    Scope and Limitations</h2>
+
+<p><strong>1.1.  Scope of Initial Release</strong>
+As a conservative estimate, the must have features described above in section 2.2 will be part of the product’s initial release. The team’s work will aim to implement its should-have and could-have features on schedule, but their fulfillment is not indispensable to the release of the initial product.</p>
+
+<p><strong>1.2.  Limitations and Exclusions</strong>
+1.  An Entec Asset Tracker mobile application that enables scanning with the use of a smartphone or tablet is being currently excluded from its initial release.</p>
+
+<ol>
+<li><p>An online solution of this system will not be released.</p></li>
+<li><p>A multi-user solution is not part of this agreement. </p></li>
+</ol>
+
+<h2>
+<a id="4----business-context" class="anchor" href="#4----business-context" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.    Business Context</h2>
+
+<p><strong>1.1.  Stakeholder Profiles</strong></p>
+
+<p><img src="https://lh5.googleusercontent.com/-SnjsyohSuKA/VQ-bX1_08gI/AAAAAAAAABM/bLAUrj7W63k/w726-h310-no/Capture.PNG" alt=""></p>
+
+<p><strong>1.2.  Project Priorities</strong></p>
+
+<p><img src="https://lh6.googleusercontent.com/-ADUe8OCECRU/VQ-buXMRT6I/AAAAAAAAABw/Q7RBG8PF2B4/w655-h278-no/Capture.PNG" alt=""></p>
+
+<p><strong>1.3.  Operating Environment</strong></p>
+
+<ul>
+<li><p>Miami Dade College’s (MDC) EnTec department is located in MDC’s Wolfson Campus in Downtown Miami, which is where the application will be used most of the time. However, EnTec organizes a multitude of events throughout the year and around different MDC campuses where Entec Asset Tracker will be used.</p></li>
+<li><p>The users will access Entec Asset Tracker whenever an asset needs to be loaned to a student, or whenever the user requires filing an incident report, keep track of assets, or create or check reservations.</p></li>
+<li><p>The data will be generated and used solely by the intended potential users of the application. </p></li>
+<li><p>Service interruptions are undesired but may be tolerated by users if kept to a minimum. Continuous access to the system may be critical under certain circumstances –such as on event days–, and so service interruptions must be avoided. The Entec Asset Tracker’s team plans on working closely with EnTec in order to avoid such occurrences.</p></li>
+<li><p>In order to provide a secure working environment, Entec Asset Tracker will require its users to create and provide a password in order to access all the information pertaining to reservations, reports, checkout dates, return dates, student information, etc.  </p></li>
+</ul>
       </section>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Entec Asset Tracker maintained by <a href="https://github.com/COP2335-Chiefs">COP2335-Chiefs</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+    <footer>
+      <p>Project maintained by <a href="https://github.com/COP2335-Chiefs">COP2335-Chiefs</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
