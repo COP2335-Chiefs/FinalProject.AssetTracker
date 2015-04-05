@@ -1,5 +1,5 @@
 # FinalProject.AssetTracker
-Application to track the loaning of tablet PC's
+Application to track the loaning of tablet PC's. The ultimate goal of the Entec Asset Tracker is to optimize every step in the asset-tracking process by providing a higher degree of automation and a logical organization of the data pertaining to this process, thereby facilitating it as much as possible.
 
 ##Entec Asset Tracker
 
