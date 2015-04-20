@@ -11,7 +11,7 @@ class Inventory
 
     public:
 
-        Inventory(int num, int loan, int broke);
+        Inventory(int num);
         ~Inventory();
         int GetnumTabs() { return numTabs; }
         void SetnumTabs(int val) { numTabs = val; }
@@ -19,9 +19,9 @@ class Inventory
         void SetloanTabs(int val) { loanTabs = val; }
         int GetbrokeTabs() { return brokenTabs; }
         void SetbrokeTabs(int val) { brokenTabs = val; }
-        void availableTabs();
-        void loadAvailableTabs();
-
+        void allTabs();
+        void loadAllTabs();
+        Tablet* tabs[maxTabs];
     protected:
     private:
         //Tabs in inventory
@@ -31,7 +31,7 @@ class Inventory
         //Busted tabs
         int brokenTabs;
         //Inventory list of non rented tabs
-        Tablet* tabs[maxTabs];
+
 };
 
 #endif // INVENTORY_H
