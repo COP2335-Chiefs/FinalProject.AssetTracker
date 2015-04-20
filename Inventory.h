@@ -1,37 +1,48 @@
-#ifndef INVENTORY_H
-#define INVENTORY_H
+#ifndef TABLET_H
+#define TABLET_H
 
 #include <string>
 #include <iostream>
-#include <Tablet.h>
+#include <Customer.h>
+#include <Date.h>
 using namespace std;
-const int maxTabs=50;
-class Inventory
+class Tablet
 {
-
     public:
+        Tablet(bool b);
+        Tablet(bool b, bool r, Customer *c, Date* ret);
+        ~Tablet();
+        bool GetonLoan() { return onLoan; }
+        void SetonLoan(bool val) { onLoan = val; }
+        bool GetonReserve() { return onReserve; }
+        void SetonReserve(bool val) {
+            onReserve = val;
+        }
+        Customer GetloanedTo() { return *loanedTo; }
+        void SetloanedTo(Customer val) { *loanedTo=val; }
+        Date GetreserveStartDate(){return *reserveStartDate;}
+        void SetreserveStartDate(string val);
+        Date GetreserveEndDate(){return *reserveEndDate;}
+        void SetreserveEndDate(string val);
+        string GetID() { return ID; }
+        void SetID(string val) { ID = val; }
+        Date GetreturnDate() { return *returnDate; }
+        void SetreturnDate(string val) { returnDate->setDate(val); }
+        void setBroken(bool val){broken=val;}
+        bool getBroken(){return broken;}
+        //utility
 
-        Inventory(int num);
-        ~Inventory();
-        int GetnumTabs() { return numTabs; }
-        void SetnumTabs(int val) { numTabs = val; }
-        int GetloanTabs() { return loanTabs; }
-        void SetloanTabs(int val) { loanTabs = val; }
-        int GetbrokeTabs() { return brokenTabs; }
-        void SetbrokeTabs(int val) { brokenTabs = val; }
-        void allTabs();
-        void loadAllTabs();
-        Tablet* tabs[maxTabs];
+        bool checkBroken();
     protected:
     private:
-        //Tabs in inventory
-        int numTabs;
-        //Tabs on loan
-        int loanTabs;
-        //Busted tabs
-        int brokenTabs;
-        //Inventory list of non rented tabs
-
+        bool onLoan;
+        Customer *loanedTo;
+        string ID;
+        Date *returnDate;
+        bool onReserve;
+        Date *reserveStartDate;
+        Date *reserveEndDate;
+        bool broken;
 };
 
-#endif // INVENTORY_H
+#endif // TABLET_H
