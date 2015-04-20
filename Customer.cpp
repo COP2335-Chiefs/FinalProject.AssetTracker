@@ -3,29 +3,73 @@
 #include "Date.h"
 #include "Inventory.h"
 #include "Tablet.h"
-Customer::Customer(string name, string organization, string organHead,
-                 string loc, string address, string phone)
+
+Date::Date(int m, int d, int y)
 {
-    this->name=name;
-    this->organization=organization;
-    this->organHead=organHead;
-    this->loc=loc;
-    this->address=address;
-    this->phone=phone;
+    day=d;
+    month=m;
+    year=y;
+}
+Date::Date(string s)
+{
+    string delimiter;
+    if(s.find("/")>=0)
+    {
+        delimiter="/";
+    }
+    else delimiter="-";
+    int arr[2];
+    size_t pos = 0;
+    string token;
+    int i=0;
+    while ((pos = s.find(delimiter)) != std::string::npos) {
+        token = s.substr(0, pos);
+        arr[i]=atoi(token.c_str());
+        s.erase(0, pos + delimiter.length());
+        i++;
+    }
+    year=atoi(s.c_str());
+    day=arr[1];
+    month=arr[0];
 
 }
 
-Customer::~Customer()
+Date::~Date()
 {
-    //dtor
+    cout<<"Date Deleted"<<endl;
+}
+void Date::setDate(string s)
+{
+    string delimiter;
+    if(s.find("/")>=0)
+    {
+        delimiter="/";
+    }
+    else delimiter="-";
+    int arr[2];
+    size_t pos = 0;
+    string token;
+    int i=0;
+    while ((pos = s.find(delimiter)) != std::string::npos) {
+        token = s.substr(0, pos);
+        arr[i]=atoi(token.c_str());
+        s.erase(0, pos + delimiter.length());
+        i++;
+    }
+    year=atoi(s.c_str());
+    day=arr[1];
+    month=arr[0];
 }
 
-void Customer::printInfo()
+
+string Date::getDate()
 {
-    cout<<"Name: "<<name<<endl;
-    cout<<"Organization: "<<organization<<endl;
-    cout<<"Head: "<<organHead<<endl;
-    cout<<"Location: "<<loc<<endl;
-    cout<<"Address: "<<address<<endl;
-    cout<<"Phone: "<<phone<<endl;
+    string b="";
+    ostringstream ss;
+     ss << month;
+     ss<<"/";
+     ss<<day;
+     ss<<"/";
+     ss<<year;
+    return ss.str();
 }
