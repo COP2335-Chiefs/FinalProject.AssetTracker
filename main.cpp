@@ -1,5 +1,3 @@
-//STILL WORKING, RESERVATION NEEDS WORKS!!!
-
 #include <iostream>
 #include "Customer.h"
 #include "Date.h"
@@ -15,10 +13,11 @@ void fixBroken(string);
 void clearData();
 int main()
 {
-    clearData();
+
     Inventory *in=new Inventory(16);
     in->loadAllTabs();
     in->tabs[0]->setBroken(true);
+    makeReservation(in->tabs[1]);
     moveBroken(in->tabs[0]);
     fixBroken(in->tabs[0]->GetID());
     return 0;
@@ -63,6 +62,33 @@ void moveBroken(Tablet *t)
         fstream file("broken.txt");
         file<<t->GetID()<<endl;
         t->SetonLoan(false);
+    }
+    string id;
+    int x=0;
+    ifstream file("available.txt");
+    ofstream temp("temp.txt");
+    string tname=t->GetID();
+    while(file>>id)
+    {
+        if(tname!=id)
+            temp<<id<<endl;
+        if(tname==id)
+            x=1;
+    }
+    file.clear();
+    file.seekg(0, ios::beg);
+    file.close();
+    temp.close();
+    remove("available.txt");
+    rename("temp.txt", "available.txt");
+    if(x==0)
+    {
+        cout << "There is no table with that id." << endl;
+    }
+    else
+    {
+        fstream file2("broken.txt");
+        file2<<tname<<endl;
     }
 }
 void fixBroken(string tname)
